@@ -119,9 +119,7 @@ var a = {"红魔乡": [
 a["全部"] = []
 for (var key in a) {
 	if (key !== "全部") {
-		for (var val in a[key]) {
-			a["全部"].push(val)
-		}
+        a["全部"].push(...a[key])
 	}
 }
 function shuffle(arr) {
