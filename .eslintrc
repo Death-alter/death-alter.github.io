@@ -1,0 +1,10 @@
+{
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "root": true,
+  "rules": {
+    "endOfLine": 0
+  }
+}
