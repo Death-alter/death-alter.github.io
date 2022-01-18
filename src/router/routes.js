@@ -1,4 +1,4 @@
-import index from "../views/index.vue";
+import index from "@/views/index";
 
 export default [
   {
