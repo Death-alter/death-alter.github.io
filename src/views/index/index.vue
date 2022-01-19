@@ -1,13 +1,15 @@
 <template>
-  <div>
+  <div class="container">
     <el-collapse v-model="type">
       <el-collapse-item title="随作品" name="随作品">
-        <rand-game></rand-game>
+        <rand-game />
       </el-collapse-item>
       <el-collapse-item title="随机体" name="随机体">
-        <rand-shoot-type></rand-shoot-type>
+        <rand-shoot-type />
       </el-collapse-item>
-      <el-collapse-item title="随符卡" name="随符卡"> </el-collapse-item>
+      <el-collapse-item title="随符卡" name="随符卡">
+        <rand-spell-card />
+      </el-collapse-item>
       <el-collapse-item title="查新闻" name="查新闻"> </el-collapse-item>
     </el-collapse>
   </div>
@@ -24,8 +26,15 @@ export default {
       type: 0,
     };
   },
-  components: { randGame, randShootType },
+  components: { randGame, randShootType, randSpellCard },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  border: 1px solid #ebeef5;
+  padding: 20px;
+}
+</style>

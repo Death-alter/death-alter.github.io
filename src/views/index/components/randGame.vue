@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="btns">
-      <div class="number-select">个数：<el-input v-model="num" type="text" /></div>
-      <el-button type="primary" class="start-btn" @click="rollGame">开始随机</el-button>
+    <div class="options">
+      <div class="options-item">
+        <span>个数：</span>
+        <el-input-number class="number-select-input" v-model="num" :min="1" :max="gameArr.length" />
+      </div>
+      <el-button type="primary" class="start-btn options-item" @click="rollGame">开始随机</el-button>
     </div>
     <div class="result-list">
       <div class="result-item" v-for="(item, index) in result" :key="index">
@@ -40,4 +43,29 @@ export default {
 </script>
 
 <style scoped>
+.number-select-input {
+  width: 150px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.options .options-item {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.result-list {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  font-size: 16px;
+  margin: 0 8px;
+}
 </style>
