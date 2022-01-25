@@ -112,7 +112,6 @@ export default {
   },
   methods: {
     rollShootType() {
-      console.log(this.all);
       const gameList = deepCopy(this.gameIndex > 0 ? this.currentList : this.all);
       const result = [];
       for (let i = 0; i < this.num && gameList.length > 0; i++) {

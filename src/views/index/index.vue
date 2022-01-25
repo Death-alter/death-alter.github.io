@@ -10,7 +10,9 @@
       <el-collapse-item title="随符卡" name="随符卡">
         <rand-spell-card />
       </el-collapse-item>
-      <el-collapse-item title="查新闻" name="查新闻"> </el-collapse-item>
+      <el-collapse-item title="查新闻" name="查新闻">
+        <seek-news />
+      </el-collapse-item>
     </el-collapse>
   </div>
 </template>
@@ -19,6 +21,7 @@
 import randShootType from "./components/randShootType";
 import randGame from "./components/randGame";
 import randSpellCard from "./components/randSpellCard";
+import seekNews from "./components/seekNews";
 
 export default {
   data() {
@@ -26,7 +29,7 @@ export default {
       type: 0,
     };
   },
-  components: { randGame, randShootType, randSpellCard },
+  components: { randGame, randShootType, randSpellCard, seekNews },
 };
 </script>
 
