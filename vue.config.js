@@ -9,7 +9,7 @@ const name = "Touhou-Freshman-Camp.github.io";
 const port = 8080;
 
 module.exports = {
-  publicPath: "./",
+  publicPath: "/",
   outputDir: "dist",
   assetsDir: "static",
   lintOnSave: process.env.NODE_ENV === "development",
